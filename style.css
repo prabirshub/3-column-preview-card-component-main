@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+/* Global Variable */
+:root {
+  --clr-sedan: hsl(31, 77%, 52%);
+  --clr-suv: hsl(184, 100%, 22%);
+  --clr-luxury: hsl(179, 100%, 13%);
+
+  --clr-trn-white: hsla(0, 0%, 100%, 0.75);
+  --clr-light-gray: hsl(0, 0%, 95%);
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Reused style */
+body {
+  background: var(--clr-light-gray);
+  font-family: 'Lexend Deca', sans-serif;
+  font-size: 15px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h2 {
+  font-family: 'Big Shoulders Display', sans-serif;
+  font-weight: 700;
+}
+
+button {
+  font-family: 'Lexend Deca', sans-serif;
+  outline: none;
+  background: inherit;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+.card {
+  max-width: 325px;
+  width: 100%;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.card__image {
+  width: 40px;
+  margin-bottom: 20px;
+}
+.card__title {
+  text-transform: uppercase;
+  color: var(--clr-light-gray);
+  margin-bottom: 20px;
+}
+.card__description {
+  font-weight: 400;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  max-width: 230px;
+  width: 100%;
+  color: var(--clr-trn-white);
+}
+.sedan {
+  background-color: var(--clr-sedan);
+  border-radius: 12px 12px 0 0;
+}
+.sedan .card__btn {
+  color: var(--clr-sedan);
+}
+.suvs {
+  background-color: var(--clr-suv);
+}
+.suvs .card__btn {
+  color: var(--clr-suv);
+}
+.luxury {
+  background-color: var(--clr-luxury);
+  border-radius: 0 0 12px 12px;
+}
+.luxury .card__btn {
+  color: var(--clr-luxury);
+}
+.card__btn {
+  padding: 10px 24px;
+  background: var(--clr-light-gray);
+  border: 2px solid var(--clr-light-gray);
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+}
+.card__btn:hover,
+.card__btn:active {
+  background: transparent;
+  color: var(--clr-light-gray);
+}
+
+/* Frontend Mentor attributionm */
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media screen and (min-width: 900px) {
+  .container {
+    flex-direction: row;
+  }
+  .card {
+    max-width: 300px;
+  }
+  .sedan {
+    border-radius: 12px 0 0 12px;
+  }
+  .luxury {
+    border-radius: 0 12px 12px 0;
+  }
+  .card__btn {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .card {
+    max-width: 290px;
+  }
+  .card__btn {
+    margin-top: 40px;
+  }
+}
